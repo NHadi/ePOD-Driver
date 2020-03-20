@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "sg.entvision.tmssystem"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 6
+        versionName "1.4-beta03"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        manifestPlaceholders = [
+                onesignal_app_id               : 'fc32a06e-603b-4f2d-b9d6-fb53e999e98f',
+                onesignal_google_project_number: 'REMOTE',
+                manifestApplicationId          : 'sg.entvision.tmssystem',
+                themeApp                       : '@style/AppTheme'
+        ]
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.github.clans:fab:1.6.4'
+    implementation("android.arch.work:work-runtime-ktx:1.0.1")
+    //rxjava
+    implementation "io.reactivex.rxjava3:rxjava:3.0.0-RC5"
+
+    // Koin for Android
+    implementation 'org.koin:koin-android:2.0.1'
+    // or Koin for Lifecycle scoping
+    implementation 'org.koin:koin-androidx-scope:2.0.1'
+    // or Koin for Android Architecture ViewModel
+    implementation 'org.koin:koin-androidx-viewmodel:2.0.1'
+
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.3.0"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+    implementation "io.reactivex.rxjava2:rxkotlin:2.3.0"
+    implementation "com.google.android.gms:play-services-location:17.0.0"
+    implementation "com.squareup.retrofit2:retrofit:2.6.1"
+    implementation "com.jakewharton.timber:timber:4.7.1"
+    //room
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    implementation "androidx.constraintlayout:constraintlayout:2.0.0-beta2"
+//    implementation "android.arch.persistence.room:compiler:1.1.1"
+    implementation "android.arch.persistence.room:rxjava2:1.1.1"
+    implementation "android.arch.persistence.room:testing:1.1.1"
+    kapt "android.arch.persistence.room:compiler:1.1.1"
+    //http
+    implementation "com.onesignal:OneSignal:3.10.8"
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.2'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.karumi:dexter:6.0.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.sha.kamel:rx-location:1.10.0@aar'
+    implementation 'com.google.maps.android:android-maps-utils:0.6.2'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation('me.dm7.barcodescanner:zxing:1.9.13')
+
+}

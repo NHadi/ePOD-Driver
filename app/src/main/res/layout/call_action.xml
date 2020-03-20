@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp"
+    android:layout_gravity="center_horizontal|center_vertical">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Select Action : "
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnMessage"
+                android:padding="10dp"
+                android:background="@drawable/root_view_rounded"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:drawableTop="@drawable/ic_text_message"
+                android:drawableTint="@color/colorPrimaryDark"
+                android:text="Text Message"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/btnCall"
+                android:padding="10dp"
+                android:background="@drawable/root_view_rounded"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:drawableTop="@drawable/ic_call_phone"
+                android:drawableTint="@color/colorPrimaryDark"
+                android:text="Phone Call"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:text="DISMISS"
+            android:id="@+id/btnDismiss"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/orange"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

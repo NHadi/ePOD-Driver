@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Smart Carrier</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="API_KEY">AIzaSyCpuzK6DxBjwDUKtzRSnejSvqaTRrmxE2o</string>
+    <string name="sign_here_title">SIGN HERE</string>
+    <string name="hint_cancel">Cancel</string>
+    <string name="hint_clear">Clear</string>
+    <string name="hint_save">Save</string>
+    <string name="one_signal">fc32a06e-603b-4f2d-b9d6-fb53e999e98f</string>
+</resources>

@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/id_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:textAppearance="?attr/textAppearanceListItem" />
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:textAppearance="?attr/textAppearanceListItem" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="120dp"
+                android:text="Status" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/txt1"
+                android:layout_toRightOf="@id/txt1"
+                android:text=": Waiting for Pickup" />
+
+            <TextView
+                android:id="@+id/txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt1"
+                android:minWidth="120dp"
+                android:text="Pickup Address " />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt1"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/txt2"
+                android:layout_toRightOf="@id/txt2"
+                android:text=": 121 WOODLANDS AVE 5" />
+
+            <TextView
+                android:id="@+id/txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt2"
+                android:minWidth="120dp"
+                android:text="Pickup Telephone " />
+
+            <TextView
+                android:id="@+id/txtTelephone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt2"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/txt3"
+                android:layout_toRightOf="@id/txt3"
+                android:text=": +6593024567 -  Mr John Lim" />
+
+
+            <TextView
+                android:id="@+id/txt5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt3"
+                android:text="Description" />
+
+
+            <TextView
+                android:id="@+id/txtDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt3"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/txt3"
+                android:layout_toRightOf="@id/txt3"
+                android:text=": Mineral Water 500ml" />
+
+
+            <TextView
+                android:id="@+id/txt6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt5"
+                android:text="Qty : 15 cartons" />
+
+
+            <TextView
+                android:id="@+id/txtVolume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt5"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/txt3"
+                android:layout_toRightOf="@id/txt3"
+                android:text="  Volume : 0.125m3" />
+
+            <TextView
+                android:id="@+id/txt4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt6"
+                android:layout_marginTop="10dp"
+                android:text="Delivery Time"
+                android:textColor="#3F51B5"
+                android:textSize="12sp" />
+
+
+            <LinearLayout
+                android:id="@+id/infosContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Pickup" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Delivery" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/timeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infosContainer"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_clock"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="Before 12PM" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_clock"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="After 2PM" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnShowDetail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@id/timeContainer"
+                android:backgroundTint="@color/colorPrimary"
+                android:drawableRight="@drawable/ic_right"
+                android:drawablePadding="-30dp"
+                android:drawableTint="@color/white"
+                android:text="See Detail"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnShowDetail"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSignature"
+                        android:layout_width="0dp"
+                        android:minHeight="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:padding="5dp"
+                        android:text="Signature"
+                        app:iconGravity="start"
+                        android:textColor="@color/white"
+                        app:icon="@drawable/ic_signature"
+                        app:iconSize="24dp" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnConfirmDelivered"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:padding="5dp"
+                        android:text="Delivered"
+                        android:textColor="@color/white"
+                        app:iconGravity="start"
+                        app:icon="@drawable/ic_delivering"
+                        app:iconSize="24dp" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnUndelivered"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:padding="5dp"
+                        app:iconGravity="start"
+                        android:text="Undelivered"
+                        android:textColor="@color/white"
+                        app:icon="@drawable/ic_package"
+                        app:iconSize="24dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCapture"
+                        android:layout_width="0dp"
+                        android:minHeight="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:padding="5dp"
+                        app:iconGravity="start"
+                        android:text="Capture Prof Of Delivery"
+                        android:textColor="@color/white"
+                        app:icon="@drawable/ic_camera"
+                        app:iconSize="24dp" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRoute"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:padding="5dp"
+                        app:iconGravity="start"
+                        app:iconPadding="-5dp"
+                        android:text="Delivery Route"
+                        android:textColor="@color/white"
+                        app:icon="@drawable/ic_way"
+                        app:iconSize="24dp" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/backHome"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:padding="5dp"
+                        app:iconPadding="-3dp"
+                        android:text="Back to Home"
+                        android:textColor="@color/white"
+                        app:icon="@drawable/ic_home"
+                        app:iconSize="24dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
